@@ -5,6 +5,8 @@ const UseEffectApi = () => {
 
     const [users, setUsers] = useState([]);
 
+    const [count ,setCount] = useState([]);
+
     const getUsers = async () => {
         const response = await fetch('https://api.github.com/users');
         const data = await response.json();
@@ -15,10 +17,16 @@ const UseEffectApi = () => {
         getUsers();
     }, []);
 
+    const handleAddCountry =()=>{
+        console.log('clicked');
+        let count=0;
+        
+        setCount(count+1);
+    };
     return (
         <>
             <h2>Number of Users:{users.length} </h2>
-            <p>Friends added:{users.length}</p>
+            <p>Friends added:{count}</p>
 
             <div className="container">
                 {
@@ -35,7 +43,7 @@ const UseEffectApi = () => {
                                         <p>Company: Google </p>
                                         <p>Followers:{user.followers_url.length} </p>
                                         <p>Email: www.{user.login}@gmail.com</p>
-                                        <button >Add Friend</button>
+                                        <button onClick={()=>handleAddCountry(user.login)}>Add Friend</button>
                                     </div>
                                 </div>
                             </div>
