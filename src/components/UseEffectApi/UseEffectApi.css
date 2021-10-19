@@ -1,0 +1,34 @@
+
+.Users{
+    display: flex;
+    background: rgb(193, 225, 238);
+    padding: 10px;
+    box-shadow: 5px 5px 5px 20px rgba(rgb(17, 2, 2), rgb(33, 51, 33), rgb(47, 47, 56), alpha) !important;
+    border-radius: 10px;
+    border:5px dashed rgb(12, 109, 173);
+    margin-top: 15px;
+    margin-left:15px;
+    margin-right:10px;
+   
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.image img{
+    width:150px;
+    height: 100px;
+}
+.Users-details{
+    border: 5px dashed lightgray;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    border: 5px solid rgb(12, 102, 124);
+  }
