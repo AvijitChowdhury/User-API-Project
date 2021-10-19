@@ -16,10 +16,10 @@ const UseEffectApi = () => {
     useEffect(() => {
         getUsers();
     }, []);
-
+    
     const handleAddCountry =()=>{
         console.log('clicked');
-        let count=0;
+        
         
         setCount(count+1);
     };
@@ -43,7 +43,7 @@ const UseEffectApi = () => {
                                         <p>Company: Google </p>
                                         <p>Followers:{user.followers_url.length} </p>
                                         <p>Email: www.{user.login}@gmail.com</p>
-                                        <button onClick={()=>handleAddCountry(user.login)}>Add Friend</button>
+                                        <button onClick={()=>handleAddCountry()}>Add Friend</button>
                                     </div>
                                 </div>
                             </div>
